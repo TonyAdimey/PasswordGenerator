@@ -5,6 +5,7 @@ var numbers = '0123456789'
 var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 var lower = 'abcdefghijklmnopqrstuvwxyz'
 var passwordOptions = '' 
+var passwordDisplay = document.querySelector("#password");
 
 function generatePassword() {
   var charLength = prompt("How many characters would you like your password to contain?")
@@ -44,13 +45,14 @@ function generatePassword() {
 
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  var passwordEl = document.createElement("textarea");
-  passwordEl.setAttribute("readonly", "");
-  passwordEl.setAttribute("class", "form-control");
-  passwordEl.setAttribute("id", "passwordDisplay");
-  passwordEl.textContent = password;
-  passwordText.appendChild(passwordEl);
+  passwordDisplay.textContent = password;
+  //var passwordText = document.querySelector("#password");
+  //var passwordEl = document.createElement("textarea");
+  //passwordEl.setAttribute("readonly", "");
+  //passwordEl.setAttribute("class", "form-control");
+  //passwordEl.setAttribute("id", "passwordDisplay");
+  //passwordEl.textContent = password;
+  //passwordText.appendChild(passwordEl);
 }
 
 // Add event listener to generate button
