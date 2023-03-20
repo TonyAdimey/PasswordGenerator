@@ -9,7 +9,7 @@ var passwordDisplay = document.querySelector("#password");
 
 function generatePassword() {
   var charLength = prompt("How many characters would you like your password to contain?")
-  if (charLength < 128 && 8 > charLength) {
+  if (charLength < 8 || charLength > 128) {
     alert("Your password must be between 8 and 128") 
     return generatePassword()
   } 
